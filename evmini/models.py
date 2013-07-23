@@ -16,10 +16,27 @@ class Constituency(models.Model):
     description = models.TextField()
     # image = ???
     # parentconstituency = models.ForeignKey(ParentConstituency)
+    # administrators = models.ManyToManyField(User)
     
     def __unicode__(self):
         return self.name
 
+        
+class User(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    # !!! (not sure how to do this...) image = models.ImageField()
+    private_email = models.EmailField()
+    # about_me = models.TextField()
+    # public_email = models.EmailField()
+    # twitter_name = models.CharField()
+    # facebook_page = models.CharField()
+    # linkedin_page = models.CharField()
+    # personal_homepage = models.CharField()
+    
+    def __unicode__(self):
+        return self.first_name + " " + self.last_name 
+        
     
 class Election(models.Model):
     constituency = models.ForeignKey(Constituency)
@@ -27,6 +44,7 @@ class Election(models.Model):
     description = models.TextField()
     first_voting_day = models.DateField()
     last_voting_day = models.DateField()
+    moderators = models.ManyToManyField(User)
     # is this right? moderators = models.ManyToManyField()
     # is this right? blockusers = models.ManyToManyField()
         
@@ -45,48 +63,15 @@ class Office(models.Model):
         return self.name
         
         
-class User(models.Model):
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-    # !!! (not sure how to do this...) image = models.ImageField()
-    private_email = models.EmailField()
-    # about_me = models.TextField()
-    # public_email = models.EmailField()
-    # twitter_name = models.CharField()
-    # facebook_page = models.CharField()
-    # linkedin_page = models.CharField()
-    # personal_homepage = models.CharField()
-    
-    def __unicode__(self):
-        return self.first_name + " " + self.last_name        
-    
-    
 class Candidate(models.Model):
     user = models.ForeignKey(User)
     election = models.ForeignKey(Election)
     office = models.ForeignKey(Office)
     about_me = models.TextField()
+    # votes = models.ManyToManyField(User)
     
     def __unicode__(self):
         return unicode(self.user)
-
-        
-# class Moderator(models.Model):
-    # user = models.ForeignKey(User)
-    # election = models.ForeignKey(Election)
-    # about_me = models.TextField()
-    
-    # def __unicode__(self):
-        # return unicode(self.user)
-        
-
-# class Administrator(models.Model):
-    # user = models.ForeignKey(User)
-    # constituency = models.ForeignKey(Constituency)
-    # about_me = models.TextField()
-    
-    # def __unicode__(self):
-        # return unicode(self.user)
         
         
 class Comment(models.Model):
