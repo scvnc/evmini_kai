@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        
+        <title> </title>
+
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/datepicker.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-combobox.css" />
+		
+    </head>
+
+    <body>
+		<div class="container">
+		 
+		  <!-- header pasted from bootstrap example -->
+		  <div class="header">
+			<ul class="nav nav-pills pull-right navFix">
+			  <li><a href="#">Home</a></li>
+			  <li><a href="#">About</a></li>
+			  <li><a href="#">Contact</a></li>
+			  <li><a href="#" class="btn btn-default">Username <span class="caret"></span> </a></li>
+			</ul>
+			<h3 class="text-muted"><img id="evLogo" src="img/copy-logo.png" /></h3>
+		  </div>
+
+				
+
+				
+				<!-- old buttons
+				
+				<div class="col-9 text-center">
+							
+							<a class="btn btn-default" href="#">Constituencies</a>
+							<a class="btn btn-default" href="#">Elections</a>
+							
+							<a class="btn btn-primary btn-small" id="back" href="#">Return to Election</a>
+							<a class="btn btn-primary btn-small" id="editE" href="#"><i class="icon-pencil icon-white"></i> Edit Election</a>
+							<a class="btn btn-primary btn-small" id="addE" href="#"> <i class="icon-plus icon-white"></i> Add Election</a>
+							<a class="btn btn-primary btn-small" href="#">My Profile</a>
+							
+						   
+							<a class="btn btn-small btn-success" id="run"  href="#">Run for Office</a>
+
+							
+							<a class="btn btn-small btn-danger" id="leave" href="#">Leave Race</a>
+
+				
+				</div>
+				
+				-->
+
+			
+			<div class="row">
+				<div class="col-12" >
+				
+					
+					<!-- candidate row html -->
+					<div class="row">
+						
+						<!-- image with voting pills -->
+						<div class="col-3">
+							
+							<p><img src="https://www.google.com/images/srpr/logo4w.png" class="rounded img-thumbnail"/></p>
+							
+								<p id="votes<?=$candidate['Candidate']['id']?>">
+							
+								<a class="btn btn-small btn-success" href="#">
+									<i class="icon-thumbs-up"></i><span class="badge btn-success"></span>
+								</a>
+								
+								<a class="btn btn-small btn-danger" href="#">
+									<i class="icon-thumbs-down"></i><span class="badge btn-danger"></span>
+								</a>
+								
+							</p>
+						</div>
+					
+						<div class="col-9">
+							<h3>Roger Wilco</h3>
+							<p><strong>Running for:</strong> Spoony Bard</p>
+							<p>I have a description.</p>
+						</div>
+						
+					</div>
+					<!-- end candidate row html -->
+				
+				
+				</div>
+			</div>
+			
+			<div class="footer">
+				footer
+			</div>
+				
+            
+            
+            
+            
+            
+            
+            
+        </div>
+        
+        <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        
+        <script type="text/javascript" src="js/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+        
+        
+        </div>
+    </body>
+
+</html>

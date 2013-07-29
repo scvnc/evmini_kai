@@ -1,0 +1,49 @@
+body {
+	padding:20px;
+}
+
+.navFix {
+
+	margin-top:10px;
+
+}
+
+#evLogo {
+	width: 150px;
+	height: 50px;
+	}
+
+.hidden {
+	display:none !important;
+}
+.modal-backdrop, .modal-backdrop.fade.in {
+	opacity: .1;
+	filter: alpha(opacity=10);
+}
+.inline-block {
+	display:inline-block !important;
+}
+.pt5 {
+	padding-top:5px;
+}
+
+
+a.bold-link {
+	font-weight: bold;
+}
+
+.container {
+max-width: 750px;
+}
+
+
+/* COMMENTS */
+
+.comment-row {
+    margin-bottom: 10px;
+}
+
+.comment-date {
+	font-style: italic;
+	text-align: right;
+}

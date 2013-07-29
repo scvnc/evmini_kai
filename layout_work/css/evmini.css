@@ -1,0 +1,36 @@
+.election-info {
+    background-color:#FFF;
+    width:90%; 
+    margin:0 auto; 
+    margin-top: 20px;
+    padding:5px;
+}
+
+.candidate-name {
+    font-size:2em;
+}
+    
+.candidate-frame {
+    padding: 25px 0px 25px 0px;
+}
+
+#header {
+    margin-bottom: 20px
+}
+
+#topnav {
+    margin-top: 60px;
+}
+
+
+/* Header related styles */
+#ev_logo {
+    background: url("../img/ev-logo.png") no-repeat;
+    min-width: 331px;
+    min-height: 107px;
+}
+
+/* Candidacies tabbed section styles */
+.candidacies.view .tabbable ul.nav-tabs li a{
+    text-align: center;
+}
